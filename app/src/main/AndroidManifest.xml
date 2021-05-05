@@ -3,6 +3,7 @@
     package="com.coolweather">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"

@@ -59,6 +59,10 @@ public class WeatherActivity extends AppCompatActivity {
         mComfortText = this.findViewById(R.id.comfort_texts);
         mCarWashText = this.findViewById(R.id.car_wash_texts);
         mSportText = this.findViewById(R.id.sport_texts);
+        initEvent();
+    }
+
+    private void initEvent() {
         mSp = PreferenceManager.getDefaultSharedPreferences(this);
         mWeatherString = mSp.getString("weather",null);
         if (mWeatherString != null) {
