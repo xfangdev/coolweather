@@ -12,12 +12,12 @@
         android:layout_gravity="end"
         android:textColor="@color/colorWhile"
         android:textSize="60sp"
-        android:id="@+id/degree_text" />
+        android:id="@+id/degree_texts" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:textColor="@color/colorWhile"
         android:textSize="20sp"
-        android:id="@+id/weather_info_text" />
+        android:id="@+id/weather_info_texts" />
 </LinearLayout>

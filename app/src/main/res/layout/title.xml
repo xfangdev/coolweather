@@ -19,5 +19,5 @@
         android:layout_centerVertical="true"
         android:textColor="@color/colorWhile"
         android:textSize="16sp"
-        android:id="@+id/title_update_time" />
+        android:id="@+id/title_update_times" />
 </RelativeLayout>
