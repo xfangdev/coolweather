@@ -160,18 +160,6 @@ public class ChooseAreaFragment extends Fragment {
         showProgressDialog();
         HttpUtil.sendOKHttpRequest(address, new Callback() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                //通过线程方法回到主线程处理逻辑
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        closeProgressDialog();
-                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-
-            @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();
                 boolean result = false;
@@ -197,9 +185,19 @@ public class ChooseAreaFragment extends Fragment {
                         }
                     });
                 }
-
-
             }
+            @Override
+            public void onFailure(Call call, IOException e) {
+                //通过线程方法回到主线程处理逻辑
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        closeProgressDialog();
+                        Toast.makeText(getContext(), "加载失败", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
         });
     }
 

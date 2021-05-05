@@ -7,6 +7,7 @@ import com.coolweather.db.County;
 import com.coolweather.db.Province;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -24,7 +25,7 @@ public class Utility {
                     province.save();
                 }
                 return true;
-            }catch (Exception e){
+            }catch (JSONException e){
                 e.printStackTrace();
             }
         }
@@ -44,7 +45,7 @@ public class Utility {
                     city.save();
                 }
                 return true;
-            }catch (Exception e){
+            }catch (JSONException e){
                 e.printStackTrace();
             }
         }
@@ -64,7 +65,7 @@ public class Utility {
                     county.save();
                 }
                 return true;
-            }catch (Exception e){
+            }catch (JSONException e){
                 e.printStackTrace();
             }
         }
