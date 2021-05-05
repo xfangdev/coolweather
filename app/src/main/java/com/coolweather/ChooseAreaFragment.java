@@ -56,7 +56,6 @@ public class ChooseAreaFragment extends Fragment {
     //当前选中的级别
     private int currentLevel;
 
-    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.choose_area,container,false);
