@@ -147,6 +147,7 @@ public class ChooseAreaFragment extends Fragment {
         }else {
             int provinceCode = selectedProvince.getProvinceCode();
             int cityCode = selectedCity.getCityCode();
+            // https://geoapi.qweather.com/v2/city/lookup?location=beij&key=你的KEY
             String address = "http://guolin.tech/api/china/" + provinceCode + "/" + cityCode;
             queryFromServer(address, "county");
             Log.d(TAG,"-----");
