@@ -5,12 +5,9 @@ import okhttp3.Request;
 
 public class HttpUtil {
 
-    private static OkHttpClient sClient;
-    private static Request sRequest;
-
     public static void sendOKHttpRequest(String address, okhttp3.Callback callback){
-        sClient = new OkHttpClient();
-        sRequest = new Request.Builder().url(address).build();
-        sClient.newCall(sRequest).enqueue(callback);
+        OkHttpClient Client = new OkHttpClient();
+        Request Request = new Request.Builder().url(address).build();
+        Client.newCall(Request).enqueue(callback);
     }
 }
